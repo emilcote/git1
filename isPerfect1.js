@@ -9,9 +9,9 @@ sum += i ;
 }
 
 if ((sum === num) && ( num > 0))  {
-console.log(true);
+return true;
 } else 
-console.log(false);
+return false;
 
 }
 
