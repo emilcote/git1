@@ -8,16 +8,13 @@ sum += i ;
 }
 }
 
-if ((sum === num) && ( num > 0))  {
-return true;
-} else 
-return false;
+return (sum === num) && ( num > 0) ;
 
 }
 
 
-console.log(isPerfect(0));
+console.log(isPerfect(6));
 console.log(isPerfect(8128));
 console.log(isPerfect(33550336));
-console.log(isPerfect(5));
+console.log(isPerfect(28));
 console.log(isPerfect(45));
