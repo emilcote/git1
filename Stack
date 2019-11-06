@@ -1,0 +1,48 @@
+//Реализация стека.Функции : push, pop, peek, length 
+
+
+// Создаем пустой стек
+let Stack = function() {
+    this.count = 0;
+    this.storage = {};
+  
+    //Добавляем значение в конец стека 
+    this.push = function(value) {
+        this.storage[this.count] = value;
+        this.count += 1;
+    }
+    
+    // Возвращаем последнее значение и удаляем его из стека
+    this.pop = function() {
+        if (this.count === 0) {
+            return undefined;
+        }
+
+        this.count -= 1;
+        let result = this.storage[this.count];
+        delete this.storage[this.count];
+        return result;
+    }
+     //Определяем размер стека
+    this.length = function() {
+        return this.count;
+    }
+    
+    // Возвращаем значение из конца не удаляя его
+    this.peek = function() {
+        return this.storage[this.count-1];
+    }
+}
+
+var myStack = new Stack();
+
+myStack.push(1);
+myStack.push(2);
+console.log(myStack.peek());
+console.log(myStack.pop());
+console.log(myStack.peek());
+myStack.push("Стек");
+console.log(myStack.length());
+console.log(myStack.peek());
+console.log(myStack.pop());
+console.log(myStack.peek());
